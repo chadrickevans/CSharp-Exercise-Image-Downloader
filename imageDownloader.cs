@@ -71,7 +71,7 @@ public class imageDownloader : MonoBehaviour
 				if(grabbedImages.Count > 0) {
 					if(grabbedImages.Any(x => x.fbmID == sendDataQueue[i].userID)) {
 						if(sendDataQueue[i].img != null) {
-							sendDataQueue[i].img.texture = grabbedImages.Find(x => x.fbmID == sendDataQueue[i].userID).img;
+							sendDataQueue[i].img.texture = grabbedImages.Find(x => x.userID == sendDataQueue[i].userID).img;
 							sendDataQueue.Remove(sendDataQueue[i]);
 						}
 						else {
